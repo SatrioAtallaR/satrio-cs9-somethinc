@@ -31,11 +31,11 @@ export default function ProductCarousel() {
         <div className="relative bg-white rounded-2xl md:rounded-3xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.07)] border border-[#efedf5] overflow-hidden p-6 sm:p-10 md:p-14 flex flex-col md:flex-row items-center gap-8 md:gap-12" style={{ minHeight: 'clamp(380px, 50vw, 500px)' }}>
 
           {/* Nav arrows */}
-          <button onClick={prev} aria-label="Previous product"
+          <button suppressHydrationWarning onClick={prev} aria-label="Previous product"
             className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-[#efedf5] text-[#3b3652] hover:bg-[#7d57d8] hover:text-white transition-all group">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-0.5 transition-transform"><polyline points="15 18 9 12 15 6" /></svg>
           </button>
-          <button onClick={next} aria-label="Next product"
+          <button suppressHydrationWarning onClick={next} aria-label="Next product"
             className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white shadow-md border border-[#efedf5] text-[#3b3652] hover:bg-[#7d57d8] hover:text-white transition-all group">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:translate-x-0.5 transition-transform"><polyline points="9 18 15 12 9 6" /></svg>
           </button>
@@ -65,10 +65,10 @@ export default function ProductCarousel() {
               {p.desc}
             </p>
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
-              <span className="font-display font-bold text-[#7d57d8]" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)' }}>
+              <span className="font-body font-bold text-[#7d57d8] tracking-tight" style={{ fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)' }}>
                 {p.price}
               </span>
-              <button className="px-6 py-3 bg-gradient-to-r from-[#3b3652] to-[#7d57d8] hover:from-[#7d57d8] hover:to-[#9b72f0] text-white font-bold rounded-xl text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl hover:shadow-[#7d57d8]/30 hover:-translate-y-1 active:scale-95">
+              <button suppressHydrationWarning className="px-6 py-3 bg-gradient-to-r from-[#3b3652] to-[#7d57d8] hover:from-[#7d57d8] hover:to-[#9b72f0] text-white font-bold rounded-xl text-sm tracking-wider uppercase transition-all shadow-lg hover:shadow-xl hover:shadow-[#7d57d8]/30 hover:-translate-y-1 active:scale-95">
                 Add to Cart
               </button>
             </div>
@@ -79,6 +79,7 @@ export default function ProductCarousel() {
         <div className="flex justify-center items-center gap-2.5 mt-7">
           {PRODUCTS.map((_, i) => (
             <button
+              suppressHydrationWarning
               key={i}
               onClick={() => setCurrent(i)}
               aria-label={`Product ${i + 1}`}

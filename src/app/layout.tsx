@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   title: "Somethinc — Local Beauty, Real Results",
   description:
     "Somethinc adalah brand kecantikan lokal Indonesia dengan produk skincare dan makeup berbasis riset, terdaftar BPOM dan bersertifikat halal.",
+  icons: {
+    icon: "/images/logoweb.jpg",
+    shortcut: "/images/logoweb.jpg",
+    apple: "/images/logoweb.jpg",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
