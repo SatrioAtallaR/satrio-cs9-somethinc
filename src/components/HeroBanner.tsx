@@ -34,8 +34,8 @@ export default function HeroBanner() {
       <div className="relative flex-[1.2] min-h-[200px] md:min-h-0 h-full flex items-center justify-center overflow-hidden bg-[#decff6] border-b-[3px] md:border-b-0 md:border-r-[3px] border-[#faf9fc]">
         <div className="absolute w-[80%] h-[80%] rounded-full bg-[#c4a8f0]/30 blur-3xl animate-float-slow pointer-events-none" />
         <h1
-          className="relative z-10 w-full text-center px-4 animate-float animate-shimmer-text text-white font-display font-bold uppercase select-none cursor-default transition-[transform] duration-300"
-          style={{ fontSize: 'clamp(2.5rem, 5.5vw, 7rem)', letterSpacing: '0.05em', lineHeight: 1.1 }}
+          className="relative z-10 w-full text-center px-2 animate-float animate-shimmer-text text-white font-display font-bold uppercase select-none cursor-default transition-[transform] duration-300"
+          style={{ fontSize: 'clamp(1.5rem, 3.5vw, 4.5rem)', letterSpacing: '0.05em', lineHeight: 1.1 }}
           onMouseMove={(e) => {
             const rect = e.currentTarget.parentElement!.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width - 0.5) * 15;

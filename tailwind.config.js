@@ -7,9 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ["'Syne'", "sans-serif"],
-        body: ["'Cabinet Grotesk'", "'DM Sans'", "sans-serif"],
-        mono: ["'Azeret Mono'", "monospace"],
+        display: ["var(--font-syne)", "sans-serif"],
+        body: ["var(--font-dm-sans)", "sans-serif"],
+        mono: ["var(--font-azeret-mono)", "monospace"],
       },
       colors: {
         off: "#F7F5F0",
